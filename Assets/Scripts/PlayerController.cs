@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
                 TriggerGameOver();
             }
         }
-        if (Input.GetKey("escape"))
+        if (Input.GetKey(KeyCode.Q))
         {
             Application.Quit();
         }
