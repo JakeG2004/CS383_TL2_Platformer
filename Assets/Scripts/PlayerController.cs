@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private float damage = 50f;
 
     //BC Mode
-    public bool BC = false;
+    private bool bc = false;
 
 
 
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
         {
-            if (BC)
+            if(bc)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
