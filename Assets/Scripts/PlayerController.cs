@@ -90,4 +90,10 @@ public class PlayerController : MonoBehaviour
             _isGrounded = false;
         }
     }
+
+    public void Hurt()
+    {
+        // Populate
+        Debug.Log("Player hurt");
+    }
 }
