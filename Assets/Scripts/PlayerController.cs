@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb = null;
     private bool _isGrounded = false;
 
+    //Starting position
+    private Vector2 _startingPosition;
+
+    //Fall threshold
+    [SerializeField] private float _fallThreshold = -10.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +33,9 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Failed to get rigidbody!");
         }
+
+        //Save starting position
+        _startingPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -34,6 +43,11 @@ public class PlayerController : MonoBehaviour
     {
         GetPlayerMovement();
         CheckGround();
+
+        if(transform.position.y < _fallThreshold)
+        {
+            ResetToStart();
+        }
     }
 
     void GetPlayerMovement()
@@ -90,10 +104,23 @@ public class PlayerController : MonoBehaviour
             _isGrounded = false;
         }
     }
-
     public void Hurt()
     {
+        //Change player's color to red upon impact
+        GetComponent<SpriteRenderer>().color = Color.red;
+
         // Populate
         Debug.Log("Player hurt");
     }
+
+    void ResetToStart()
+    {
+        transform.position = _startingPosition;
+
+        //Reset velocity to prevent momentum
+        _rb.linearVelocity = Vector2.zero;
+
+        Debug.Log("Reset player to starting position");
+    }
+
 }

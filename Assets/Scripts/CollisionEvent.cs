@@ -9,15 +9,16 @@ public class CollisionEvent : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.collider.CompareTag(_collideTag))
+        if (col.collider.CompareTag(_collideTag))
         {
             _collisionEvent.Invoke();
+            gameObject.SetActive(false);
         }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag(_collideTag))
+        if (col.CompareTag(_collideTag))
         {
             _collisionEvent.Invoke();
         }
