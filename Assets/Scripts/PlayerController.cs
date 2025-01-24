@@ -139,8 +139,6 @@ public class PlayerController : MonoBehaviour
         //Change player's color to red upon impact
         GetComponent<SpriteRenderer>().color = Color.red;
 
-        // Populate
-        Debug.Log("Player hurt");
         TakeDamage(damage);
     }
 
@@ -149,6 +147,7 @@ public class PlayerController : MonoBehaviour
         healthAmount -= damage;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
         healthBar.fillAmount = healthAmount / 100f;
+        _maxSpeed = 7f;
     }
 
     void TriggerGameOver()
@@ -164,8 +163,6 @@ public class PlayerController : MonoBehaviour
 
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
-
-        Debug.Log("Reset player to starting position");
     }
 
 }
