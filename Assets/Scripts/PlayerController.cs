@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _maxSpeed = 10.0f;
     [SerializeField] private float _jumpForce = 8.0f;
     [SerializeField] private float _friction = 10.0f;
+    [SerializeField] private float _fallThreshold = -10.0f;
+
 
     // Private variables
     private Rigidbody2D _rb = null;
@@ -20,8 +24,17 @@ public class PlayerController : MonoBehaviour
     //Starting position
     private Vector2 _startingPosition;
 
-    //Fall threshold
-    [SerializeField] private float _fallThreshold = -10.0f;
+    //Health
+    public Image healthBar;
+    public CanvasGroup gameOverCanvas;
+    private float healthAmount = 100f;
+    private float damage = 50f;
+
+    //BC Mode
+    public bool BC = false;
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +49,14 @@ public class PlayerController : MonoBehaviour
 
         //Save starting position
         _startingPosition = transform.position;
+
+        //Initialize health bar
+        healthBar.fillAmount = healthAmount / 100f;
+
+        //Initially make game over canvas invisible
+        gameOverCanvas.alpha = 0f;
+        gameOverCanvas.interactable = false;
+        gameOverCanvas.blocksRaycasts = false;
     }
 
     // Update is called once per frame
@@ -44,10 +65,19 @@ public class PlayerController : MonoBehaviour
         GetPlayerMovement();
         CheckGround();
 
-        if(transform.position.y < _fallThreshold)
+        if(transform.position.y < _fallThreshold || healthAmount <= 0)
         {
-            ResetToStart();
+            if (BC)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                ResetToStart();
+                TriggerGameOver();
+            }
         }
+
     }
 
     void GetPlayerMovement()
@@ -111,6 +141,21 @@ public class PlayerController : MonoBehaviour
 
         // Populate
         Debug.Log("Player hurt");
+        TakeDamage(damage);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        healthAmount -= damage;
+        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+        healthBar.fillAmount = healthAmount / 100f;
+    }
+
+    void TriggerGameOver()
+    {
+        gameOverCanvas.alpha = 1f;
+        gameOverCanvas.interactable = true;
+        gameOverCanvas.blocksRaycasts = true;
     }
 
     void ResetToStart()
