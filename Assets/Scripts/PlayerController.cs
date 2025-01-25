@@ -22,12 +22,17 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb = null;
     private bool _isGrounded = false;
 
+    // Animator
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    
+    bool facingRight = true;
+
     //Starting position
     private Vector2 _startingPosition;
 
     //Health
     public Image healthBar;
-    public CanvasGroup gameOverCanvas;
     private float healthAmount = 100f;
     private float damage = 50f;
 
@@ -48,6 +53,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Failed to get rigidbody!");
         }
 
+        // Assign Animator component
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         
         
 
@@ -56,11 +65,6 @@ public class PlayerController : MonoBehaviour
 
         //Initialize health bar
         healthBar.fillAmount = healthAmount / 100f;
-
-        //Initially make game over canvas invisible
-        gameOverCanvas.alpha = 0f;
-        gameOverCanvas.interactable = false;
-        gameOverCanvas.blocksRaycasts = false;
 
         //Load BC mode setting check (jillian)
         UpdateBCMode();
@@ -73,11 +77,6 @@ public class PlayerController : MonoBehaviour
         CheckGround();
 
         UpdateBCMode(); //checks if exist (jillian)
-
-        if(Input.GetKeyDown("r") || Input.GetButtonDown("Submit"))
-        {
-            ExitGameOver();
-        }
 
 
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
@@ -109,14 +108,23 @@ public class PlayerController : MonoBehaviour
         _move = Input.GetAxis("Horizontal");
         if(_move != 0)
         {
-           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
-         
+            float newVelX = _maxSpeed * _move;
+
+            if ((_move > 0 && !facingRight) || (_move < 0 && facingRight))
+            {
+                Flip();
+            }
+
+            _rb.linearVelocityX = newVelX;
+
+            animator.SetBool("IsRunning", true);
         }
         
         // Lerp to zero velocity
         else
         {
             _rb.linearVelocityX = Mathf.Lerp(_rb.linearVelocityX, 0.0f, Time.deltaTime * _friction);
+            animator.SetBool("IsRunning", false);
         }
 
         // Handle vertical movement
@@ -142,11 +150,15 @@ public class PlayerController : MonoBehaviour
             if(groundDist < (transform.localScale.y / 2) + 0.1f)
             {
                 _isGrounded = true;
+
+                // End animation for jumping
+                animator.SetBool("IsJumping", false);
             }
 
             else
             {
                 _isGrounded = false;
+                animator.SetBool("IsJumping", true);
             }
         }
 
@@ -155,13 +167,27 @@ public class PlayerController : MonoBehaviour
             _isGrounded = false;
         }
     }
+
+    void Flip()
+    {
+        // Toggle facingRight
+        facingRight = !facingRight;
+
+        // Flip the player's scale
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // Invert the x-scale
+        gameObject.transform.localScale = currentScale;
+    }
+
     public void Hurt()
     {
-        if(!bcMode){
-        //Change player's color to red upon impact
-        GetComponent<SpriteRenderer>().color = Color.red;
+        // Populate
+        Debug.Log("Player hurt");
 
-        TakeDamage(damage);
+        if(!bcMode)
+        {
+            animator.SetTrigger("TriggerHurt");
+            TakeDamage(damage);
         }
     }
 
@@ -188,13 +214,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void ExitGameOver()
-    {
-        gameOverCanvas.alpha = 0f;
-        gameOverCanvas.interactable = false;
-        gameOverCanvas.blocksRaycasts = false;
-    }
-
     void ResetToStart()
     {
         transform.position = _startingPosition;
@@ -202,5 +221,5 @@ public class PlayerController : MonoBehaviour
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
     }
-
+        
 }
