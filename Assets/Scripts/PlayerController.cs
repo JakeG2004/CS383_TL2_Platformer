@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             _rb.linearVelocityX = -1 * _maxSpeed;
             
-            if(!facingRight){
+            if(facingRight){
                 Flip();
             }
             animator.Play("Character_Run");
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         else if(Input.GetKey(_right))
         {
             _rb.linearVelocityX = _maxSpeed;
-            if(facingRight){
+            if(!facingRight){
                 Flip();
             }
             animator.Play("Character_Run");

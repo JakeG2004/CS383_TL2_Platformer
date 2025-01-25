@@ -124,10 +124,10 @@ TextureImporter:
       name: WALK_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 22
-        width: 22
-        height: 36
+        x: 36
+        y: 23
+        width: 20
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
       name: WALK_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 22
-        width: 34
-        height: 37
+        x: 129
+        y: 23
+        width: 32
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: WALK_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 22
-        width: 36
-        height: 36
+        x: 223
+        y: 23
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: WALK_3
       rect:
         serializedVersion: 2
-        x: 317
-        y: 22
-        width: 38
-        height: 35
+        x: 318
+        y: 23
+        width: 36
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: WALK_4
       rect:
         serializedVersion: 2
-        x: 415
-        y: 22
-        width: 33
-        height: 36
+        x: 416
+        y: 23
+        width: 31
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: WALK_5
       rect:
         serializedVersion: 2
-        x: 513
-        y: 22
-        width: 25
-        height: 37
+        x: 514
+        y: 23
+        width: 23
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: WALK_6
       rect:
         serializedVersion: 2
-        x: 613
-        y: 22
-        width: 24
-        height: 36
+        x: 614
+        y: 23
+        width: 22
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: WALK_7
       rect:
         serializedVersion: 2
-        x: 709
-        y: 22
-        width: 26
-        height: 35
+        x: 710
+        y: 23
+        width: 24
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
