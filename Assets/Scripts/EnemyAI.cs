@@ -16,6 +16,8 @@ public class EnemyAI : MonoBehaviour
 
 	private void Update()
 	{
+		//This is where we change the target.
+		//There are other controls available.
 		agent.SetDestination(target.position);
 	}
 }
