@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     // Keys
-    [SerializeField] private KeyCode _left = KeyCode.A;
-    [SerializeField] private KeyCode _right = KeyCode.D;
     [SerializeField] private KeyCode _jump = KeyCode.W;
+
+    // Variable to get x axis for movement From input manager
+    private float _move;
 
     // useful values to change
     [SerializeField] private float _maxSpeed = 10.0f;
@@ -70,7 +71,14 @@ public class PlayerController : MonoBehaviour
     {
         GetPlayerMovement();
         CheckGround();
+
         UpdateBCMode(); //checks if exist (jillian)
+
+        if(Input.GetKeyDown("r") || Input.GetButtonDown("Submit"))
+        {
+            ExitGameOver();
+        }
+
 
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
         {
@@ -98,16 +106,13 @@ public class PlayerController : MonoBehaviour
     void GetPlayerMovement()
     {
         // Handle horizontal movement
-        if(Input.GetKey(_left))
+        _move = Input.GetAxis("Horizontal");
+        if(_move != 0)
         {
-            _rb.linearVelocityX = -1 * _maxSpeed;
+           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
+         
         }
-
-        else if(Input.GetKey(_right))
-        {
-            _rb.linearVelocityX = _maxSpeed;
-        }
-
+        
         // Lerp to zero velocity
         else
         {
@@ -115,9 +120,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Handle vertical movement
-        if(Input.GetKeyDown(_jump) && _isGrounded)
+        if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
         {
-            _rb.linearVelocityY = _jumpForce;
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
+            
         }
     }
 
@@ -180,6 +186,13 @@ public class PlayerController : MonoBehaviour
 
         SceneManager.LoadScene(2); //(andrew)
 
+    }
+
+    void ExitGameOver()
+    {
+        gameOverCanvas.alpha = 0f;
+        gameOverCanvas.interactable = false;
+        gameOverCanvas.blocksRaycasts = false;
     }
 
     void ResetToStart()
