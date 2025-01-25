@@ -7,6 +7,8 @@ public class CollisionEvent : MonoBehaviour
 
     [SerializeField] private string _collideTag = "Player";
 
+    // Test comment
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.collider.CompareTag(_collideTag))
