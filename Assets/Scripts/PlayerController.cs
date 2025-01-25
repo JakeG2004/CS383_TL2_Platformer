@@ -22,13 +22,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb = null;
     private bool _isGrounded = false;
 
-<<<<<<< HEAD
     // Animator
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     
     bool facingRight = true;
-=======
     //Starting position
     private Vector2 _startingPosition;
 
@@ -43,7 +41,6 @@ public class PlayerController : MonoBehaviour
 
 
 
->>>>>>> main
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,11 +53,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Failed to get rigidbody!");
         }
 
-<<<<<<< HEAD
         // Assign Animator component
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-=======
         
         
 
@@ -77,7 +72,6 @@ public class PlayerController : MonoBehaviour
 
         //Load BC mode setting check (jillian)
         UpdateBCMode();
->>>>>>> main
     }
 
     // Update is called once per frame
@@ -121,9 +115,8 @@ public class PlayerController : MonoBehaviour
     {
         // Handle horizontal movement
         _move = Input.GetAxis("Horizontal");
-        if(_move != 0)
+        if(_move < 0)
         {
-<<<<<<< HEAD
             _rb.linearVelocityX = -1 * _maxSpeed;
             
             if(facingRight){
@@ -132,21 +125,17 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsRunning", true);
         }
 
-        else if(Input.GetKey(_right))
+        else if(_move > 0)
         {
             _rb.linearVelocityX = _maxSpeed;
             if(!facingRight){
                 Flip();
             }
             animator.SetBool("IsRunning", true);
-        }
-
-=======
-           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
-         
-        }
         
->>>>>>> main
+
+           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
+        }
         // Lerp to zero velocity
         else
         {
@@ -181,20 +170,18 @@ public class PlayerController : MonoBehaviour
                 // End animation for jumping
                 animator.SetBool("IsJumping", false);
             }
-
             else
             {
                 _isGrounded = false;
                 animator.SetBool("IsJumping", true);
             }
+        
         }
-
         else
         {
             _isGrounded = false;
         }
     }
-<<<<<<< HEAD
 
     void Flip(){
         Vector3 currentScale = gameObject.transform.localScale;
@@ -206,19 +193,12 @@ public class PlayerController : MonoBehaviour
 
     public void Hurt()
     {
-        // Populate
-        Debug.Log("Player hurt");
-        animator.SetTrigger("TriggerHurt");
-=======
-    public void Hurt()
-    {
         if(!bcMode){
         //Change player's color to red upon impact
         GetComponent<SpriteRenderer>().color = Color.red;
-
+        animator.SetTrigger("TriggerHurt");
         TakeDamage(damage);
         }
->>>>>>> main
     }
 
     public void TakeDamage(float damage)
