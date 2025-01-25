@@ -115,12 +115,12 @@ TextureImporter:
       name: JUMP_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 25
-        width: 28
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 31
+        y: 26
+        width: 26
+        height: 35
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,12 +137,12 @@ TextureImporter:
       name: JUMP_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 31
-        width: 28
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 32
+        width: 26
+        height: 35
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: JUMP_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 33
-        width: 27
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 34
+        width: 25
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: JUMP_3
       rect:
         serializedVersion: 2
-        x: 314
-        y: 31
-        width: 34
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 315
+        y: 32
+        width: 32
+        height: 35
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: JUMP_4
       rect:
         serializedVersion: 2
-        x: 411
-        y: 24
-        width: 34
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 412
+        y: 25
+        width: 32
+        height: 35
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

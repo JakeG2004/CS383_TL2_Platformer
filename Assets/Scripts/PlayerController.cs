@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb = null;
     private bool _isGrounded = false;
 
+    // Animator
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +31,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Failed to get rigidbody!");
         }
+
+        // Assign Animator component
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -42,23 +50,29 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(_left))
         {
             _rb.linearVelocityX = -1 * _maxSpeed;
+            spriteRenderer.flipX = true;
+            animator.Play("Character_Run");
         }
 
         else if(Input.GetKey(_right))
         {
             _rb.linearVelocityX = _maxSpeed;
+            spriteRenderer.flipX = false;
+            animator.Play("Character_Run");
         }
 
         // Lerp to zero velocity
         else
         {
             _rb.linearVelocityX = Mathf.Lerp(_rb.linearVelocityX, 0.0f, Time.deltaTime * _friction);
+            animator.Play("Character_Idle");
         }
 
         // Handle vertical movement
         if(Input.GetKeyDown(_jump) && _isGrounded)
         {
             _rb.linearVelocityY = _jumpForce;
+            animator.Play("Character_Jump");
         }
     }
 
@@ -82,6 +96,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 _isGrounded = false;
+                animator.Play("Character_Jump");
             }
         }
 
