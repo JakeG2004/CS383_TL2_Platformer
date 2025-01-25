@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     // Animator
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    
+    bool facingRight = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,14 +52,19 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(_left))
         {
             _rb.linearVelocityX = -1 * _maxSpeed;
-            spriteRenderer.flipX = true;
+            
+            if(!facingRight){
+                Flip();
+            }
             animator.Play("Character_Run");
         }
 
         else if(Input.GetKey(_right))
         {
             _rb.linearVelocityX = _maxSpeed;
-            spriteRenderer.flipX = false;
+            if(facingRight){
+                Flip();
+            }
             animator.Play("Character_Run");
         }
 
@@ -104,6 +111,14 @@ public class PlayerController : MonoBehaviour
         {
             _isGrounded = false;
         }
+    }
+
+    void Flip(){
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     public void Hurt()
