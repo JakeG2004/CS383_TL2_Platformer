@@ -131,5 +131,6 @@ public class PlayerController : MonoBehaviour
     {
         // Populate
         Debug.Log("Player hurt");
+        animator.SetTrigger("TriggerHurt");
     }
 }
