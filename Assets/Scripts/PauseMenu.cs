@@ -12,7 +12,7 @@ public class PauseManager : MonoBehaviour
 
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Submit")){
             if(isPaused){
                 resumeGame();
             }else{
