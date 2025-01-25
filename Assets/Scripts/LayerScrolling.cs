@@ -2,28 +2,40 @@ using UnityEngine;
 
 public class LayerScrolling2D : MonoBehaviour
 {
-    
-    Material mat;
-    Vector3 CameraPosition;
-    [Range(0f, 0.5f)]
-    public float speed = 0.2f;
-    public Transform cameraTransform; //reference to the camera
+    [TextArea]
+    public string Infinite_Scrolling_Setup = 
+            "1. Apply this script to a background/foreground object\n" +
+            "2. Duplicate that object 2 times\n" +
+            "3. Set them as the main object's children\n" +
+            "4. Move them to the right and left of the parent\n" +
+            "5. Delete this script from the children";
+
+
+    private float startPos, length;
+    public GameObject cam;
+    [Range(0f,1f)]
+    public float speed; //speed bg moves relative to the camera
 
     void Start()
     {
-        mat = GetComponent<SpriteRenderer>().material;
-        if (cameraTransform == null){ //default initializer
-            cameraTransform = Camera.main.transform;
-        }
-        CameraPosition = cameraTransform.position;
+        startPos = transform.position.x;
+        //get length of screen for infinite scrolling
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float deltaX = cameraTransform.position.x - CameraPosition.x;
-        //scroll background based on camera movement
-        mat.mainTextureOffset += new Vector2(deltaX * speed, 0);
-        //update camera position
-        CameraPosition = cameraTransform.position;
+        float distance = cam.transform.position.x * speed;
+        float movement = cam.transform.position.x * (1- speed);
+
+        transform.position = new Vector3(startPos+distance,transform.position.y,transform.position.z);
+
+        //move the background to the start of the screen upon reaching its bounds
+        //must have the bg be 3x its length set in scene to work
+        if(movement > startPos +length){
+            startPos+=length;
+        }else if (movement < startPos -length){
+            startPos -= length;
+        }
     }
 }
