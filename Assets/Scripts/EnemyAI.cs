@@ -10,8 +10,8 @@ public class EnemyAI : MonoBehaviour
 	private void Start()
 	{
 		agent = GetComponent<NavMeshAgent>();
-		agent.updateRotation = false;
-		agent.updateUpAxis = false;
+		agent.updateRotation = false; //Restrict transform orientation change
+		agent.updateUpAxis = false; //Prevent automatic up axis realignment
 	}
 
 	private void Update()
