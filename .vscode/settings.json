@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TL2 Platformer.sln"
+    "dotnet.defaultSolution": "CS383_TL2_Platformer.sln"
 }

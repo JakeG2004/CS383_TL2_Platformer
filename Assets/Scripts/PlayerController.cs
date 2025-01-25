@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     // Keys
-    [SerializeField] private KeyCode _left = KeyCode.A;
-    [SerializeField] private KeyCode _right = KeyCode.D;
     [SerializeField] private KeyCode _jump = KeyCode.W;
+
+    // Variable to get x axis for movement From input manager
+    private float _move;
 
     // useful values to change
     [SerializeField] private float _maxSpeed = 10.0f;
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
     private float damage = 50f;
 
     //BC Mode
-    private bool bc = false;
+    private bool bcMode = false;
 
 
 
@@ -47,6 +48,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Failed to get rigidbody!");
         }
 
+        
+        
+
         //Save starting position
         _startingPosition = transform.position;
 
@@ -57,6 +61,9 @@ public class PlayerController : MonoBehaviour
         gameOverCanvas.alpha = 0f;
         gameOverCanvas.interactable = false;
         gameOverCanvas.blocksRaycasts = false;
+
+        //Load BC mode setting check (jillian)
+        UpdateBCMode();
     }
 
     // Update is called once per frame
@@ -65,9 +72,21 @@ public class PlayerController : MonoBehaviour
         GetPlayerMovement();
         CheckGround();
 
+        UpdateBCMode(); //checks if exist (jillian)
+
+        if(Input.GetKeyDown("r") || Input.GetButtonDown("Submit"))
+        {
+            ExitGameOver();
+        }
+
+
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
         {
-            if(bc)
+            ResetToStart();
+            TriggerGameOver();
+
+            /*
+            if(bcMode)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -76,8 +95,9 @@ public class PlayerController : MonoBehaviour
                 ResetToStart();
                 TriggerGameOver();
             }
+            */
         }
-        if (Input.GetKey("escape"))
+        if (Input.GetKey(KeyCode.Q))
         {
             Application.Quit();
         }
@@ -86,16 +106,13 @@ public class PlayerController : MonoBehaviour
     void GetPlayerMovement()
     {
         // Handle horizontal movement
-        if(Input.GetKey(_left))
+        _move = Input.GetAxis("Horizontal");
+        if(_move != 0)
         {
-            _rb.linearVelocityX = -1 * _maxSpeed;
+           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
+         
         }
-
-        else if(Input.GetKey(_right))
-        {
-            _rb.linearVelocityX = _maxSpeed;
-        }
-
+        
         // Lerp to zero velocity
         else
         {
@@ -103,9 +120,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Handle vertical movement
-        if(Input.GetKeyDown(_jump) && _isGrounded)
+        if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
         {
-            _rb.linearVelocityY = _jumpForce;
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
+            
         }
     }
 
@@ -139,25 +157,42 @@ public class PlayerController : MonoBehaviour
     }
     public void Hurt()
     {
+        if(!bcMode){
         //Change player's color to red upon impact
         GetComponent<SpriteRenderer>().color = Color.red;
 
         TakeDamage(damage);
+        }
     }
 
     public void TakeDamage(float damage)
     {
-        healthAmount -= damage;
-        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-        healthBar.fillAmount = healthAmount / 100f;
-        _maxSpeed = 7f;
+        if(!bcMode){ //(jillian)
+            healthAmount -= damage;
+            healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+            healthBar.fillAmount = healthAmount / 100f;
+            _maxSpeed = 7f;
+        }
     }
 
+    private void UpdateBCMode(){
+        bcMode = PlayerPrefs.GetInt("BCMode", 0) == 1;
+    }
     void TriggerGameOver()
     {
-        gameOverCanvas.alpha = 1f;
-        gameOverCanvas.interactable = true;
-        gameOverCanvas.blocksRaycasts = true;
+        //gameOverCanvas.alpha = 1f;
+        //gameOverCanvas.interactable = true;
+        //gameOverCanvas.blocksRaycasts = true;
+
+        SceneManager.LoadScene(2); //(andrew)
+
+    }
+
+    void ExitGameOver()
+    {
+        gameOverCanvas.alpha = 0f;
+        gameOverCanvas.interactable = false;
+        gameOverCanvas.blocksRaycasts = false;
     }
 
     void ResetToStart()
