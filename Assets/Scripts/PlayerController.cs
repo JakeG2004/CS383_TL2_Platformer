@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private float damage = 50f;
 
     //BC Mode
-    private bool bc = false;
+    [SerializeField] public bool bc = false;
 
 
 
