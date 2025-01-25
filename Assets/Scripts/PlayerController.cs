@@ -56,7 +56,8 @@ public class PlayerController : MonoBehaviour
             if(facingRight){
                 Flip();
             }
-            animator.Play("Character_Run");
+            animator.SetBool("IsRunning", true);
+            //animator.Play("Character_Run");
         }
 
         else if(Input.GetKey(_right))
@@ -65,21 +66,23 @@ public class PlayerController : MonoBehaviour
             if(!facingRight){
                 Flip();
             }
-            animator.Play("Character_Run");
+            animator.SetBool("IsRunning", true);
+            //animator.Play("Character_Run");
         }
 
         // Lerp to zero velocity
         else
         {
             _rb.linearVelocityX = Mathf.Lerp(_rb.linearVelocityX, 0.0f, Time.deltaTime * _friction);
-            animator.Play("Character_Idle");
+            animator.SetBool("IsRunning", false);
+            //animator.Play("Character_Idle");
         }
 
         // Handle vertical movement
         if(Input.GetKeyDown(_jump) && _isGrounded)
         {
             _rb.linearVelocityY = _jumpForce;
-            animator.Play("Character_Jump");
+            //animator.Play("Character_Jump");
         }
     }
 
@@ -98,12 +101,15 @@ public class PlayerController : MonoBehaviour
             if(groundDist < (transform.localScale.y / 2) + 0.1f)
             {
                 _isGrounded = true;
+
+                // End animation for jumping
+                animator.SetBool("IsJumping", false);
             }
 
             else
             {
                 _isGrounded = false;
-                animator.Play("Character_Jump");
+                animator.SetBool("IsJumping", true);
             }
         }
 
