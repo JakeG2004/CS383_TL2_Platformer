@@ -40,7 +40,7 @@ public class PauseManager : MonoBehaviour
     }
 
     public void quitGame(){
-        Application.Quit();
+        Application.Quit();//comment
     }
 }
 
