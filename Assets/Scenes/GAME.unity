@@ -4336,15 +4336,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b9fe381dcbcf64daa675fcf6e8f822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _left: 97
-  _right: 100
   _jump: 119
   _maxSpeed: 10
   _jumpForce: 6.5
   _friction: 10
   _fallThreshold: -10
   healthBar: {fileID: 856158632}
-  gameOverCanvas: {fileID: 890238168}
 --- !u!114 &1958937045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4357,7 +4354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d897505cb8efc9b45aff5bdd51d8d1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 1603909102}
+  PauseMenu: {fileID: 1813567348}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
