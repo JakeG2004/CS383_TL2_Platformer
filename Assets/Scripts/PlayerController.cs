@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private float damage = 50f;
 
     //BC Mode
-    [SerializeField] public bool bc = false;
+    private bool bcMode = false;
 
 
 
@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Failed to get rigidbody!");
         }
 
+        
+        
+
         //Save starting position
         _startingPosition = transform.position;
 
@@ -57,6 +60,9 @@ public class PlayerController : MonoBehaviour
         gameOverCanvas.alpha = 0f;
         gameOverCanvas.interactable = false;
         gameOverCanvas.blocksRaycasts = false;
+
+        //Load BC mode setting check (jillian)
+        UpdateBCMode();
     }
 
     // Update is called once per frame
@@ -64,10 +70,15 @@ public class PlayerController : MonoBehaviour
     {
         GetPlayerMovement();
         CheckGround();
+        UpdateBCMode(); //checks if exist (jillian)
 
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
         {
-            if(bc)
+            ResetToStart();
+            TriggerGameOver();
+
+            /*
+            if(bcMode)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -76,6 +87,7 @@ public class PlayerController : MonoBehaviour
                 ResetToStart();
                 TriggerGameOver();
             }
+            */
         }
         if (Input.GetKey(KeyCode.Q))
         {
@@ -139,27 +151,34 @@ public class PlayerController : MonoBehaviour
     }
     public void Hurt()
     {
+        if(!bcMode){
         //Change player's color to red upon impact
         GetComponent<SpriteRenderer>().color = Color.red;
 
         TakeDamage(damage);
+        }
     }
 
     public void TakeDamage(float damage)
     {
-        healthAmount -= damage;
-        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-        healthBar.fillAmount = healthAmount / 100f;
-        _maxSpeed = 7f;
+        if(!bcMode){ //(jillian)
+            healthAmount -= damage;
+            healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+            healthBar.fillAmount = healthAmount / 100f;
+            _maxSpeed = 7f;
+        }
     }
 
+    private void UpdateBCMode(){
+        bcMode = PlayerPrefs.GetInt("BCMode", 0) == 1;
+    }
     void TriggerGameOver()
     {
         //gameOverCanvas.alpha = 1f;
         //gameOverCanvas.interactable = true;
         //gameOverCanvas.blocksRaycasts = true;
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(2); //(andrew)
 
     }
 

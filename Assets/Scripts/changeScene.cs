@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
-
     public void moveToScene(int sceneID){
         SceneManager.LoadScene(sceneID); //append this script to an object or a trigger section then specify the scene ID (find scene IDs via Edit > Build Profiles)
    }
@@ -15,7 +14,5 @@ public class changeScene : MonoBehaviour
    }
 }
 
-/*
-MAIN MENU IS SCENE ID 0 FOR REFERENCE :DDDD
+//MAIN MENU IS SCENE ID 0 FOR REFERENCE :DDDD
 
-*/
