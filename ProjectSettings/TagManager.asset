@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stomp
   - Collectables
+  - Enemy
   layers:
   - Default
   - TransparentFX

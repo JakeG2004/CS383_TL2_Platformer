@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1404584967}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: 55b64d2958bdfd8408e86d622ebfece0, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: 55b64d2958bdfd8408e86d622ebfece0, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -171,7 +175,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 649109626199009748, guid: 55b64d2958bdfd8408e86d622ebfece0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
