@@ -308,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 267911344}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4, y: -0.5, z: 0}
+  m_LocalPosition: {x: -41.4, y: -0.5, z: 0}
   m_LocalScale: {x: 0.6842437, y: 0.6842437, z: 0.6842437}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 298288217}
   - component: {fileID: 298288220}
   - component: {fileID: 298288219}
+  - component: {fileID: 298288222}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -660,6 +661,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &298288222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298288215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &305064633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,7 +1722,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1281403167
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 12804c928b1d33543aa55b62ffd12793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2560,7 +2577,7 @@ GameObject:
   - component: {fileID: 826193543}
   - component: {fileID: 826193542}
   - component: {fileID: 826193544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2697,7 +2714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_OverrideArea: 1
   m_Area: 1
-  m_IgnoreFromBuild: 0
+  m_IgnoreFromBuild: 1
   m_AffectedAgents: ffffffff
 --- !u!1 &828433754
 GameObject:
@@ -3476,110 +3493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1276778503
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1276778506}
-  - component: {fileID: 1276778505}
-  - component: {fileID: 1276778504}
-  m_Layer: 0
-  m_Name: NavigableArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1276778504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276778503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
---- !u!212 &1276778505
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276778503}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1281403167
-  m_SortingLayer: -1
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1276778506
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276778503}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.1414, y: 5, z: 0}
-  m_LocalScale: {x: 150, y: 50, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376185346
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,8 +3610,7 @@ GameObject:
   - component: {fileID: 1388672875}
   - component: {fileID: 1388672877}
   - component: {fileID: 1388672879}
-  - component: {fileID: 1388672878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35566,89 +35478,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &1388672878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388672873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709c8d6349be44c68dff3d220992400c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AffectedAgents: ffffffff
-  m_TileModifiers:
-  - tile: {fileID: 11400000, guid: fc1d04b1010ba214ba154099ac48c616, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: fb8ec4232a7fd5046a325eaa9666ac9e, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: beb1464750c58f94288f47ed8a7f6e85, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 674e5efe429526e46bfa5592dab58032, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 9dac8a56bf2a23b41ad2fd65f7020e99, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: a76ab0e2f30318d47a823bdd9cc49c62, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 58c5ae6d5ecfd704cacde5521bf5f939, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: f9e82ec54cfb80849a47addf7f976820, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 28adb7ccb139e25498244e27501899d3, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: ecc8b0a97f21be44497a6885749b71be, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 1d40ff8981de6c54e85a261cbeb4de82, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 7b2feb281c4119640bab962ccf27fb0d, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 2d672767ed7b3f841b4e4a802d3bd74f, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 6b924281e8af0b04991046d65e1b9e16, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: c13425c4c483f8e4392c8b153e438fea, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 81121ae81a6a80c4393a38088bca7a15, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: e5ed4c879a1db9f4982029b78e20cad8, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 63b03e596d2cccc4c97d6571227d78c3, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 1305da108c0aeba48b36ce25946ad3e2, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 04288e4780686af47ace97b5cf003b1f, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: 80bdca04f5557374ab14c1b2dbae0e34, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: f06c7d07db751d846b3da36c034f55b3, type: 2}
-    overrideArea: 1
-    area: 1
-  - tile: {fileID: 11400000, guid: c947ba192ee899c4c99f5097de6e2c1f, type: 2}
-    overrideArea: 1
-    area: 1
 --- !u!114 &1388672879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36094,6 +35923,7 @@ GameObject:
   - component: {fileID: 1678185253}
   - component: {fileID: 1678185252}
   - component: {fileID: 1678185251}
+  - component: {fileID: 1678185256}
   m_Layer: 0
   m_Name: Platform (1)
   m_TagString: Untagged
@@ -36339,6 +36169,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1678185256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678185249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1691406393
 GameObject:
   m_ObjectHideFlags: 0
@@ -36834,7 +36680,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1281403167
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 12804c928b1d33543aa55b62ffd12793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36860,7 +36706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_OverrideArea: 0
   m_Area: 0
-  m_IgnoreFromBuild: 1
+  m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
 --- !u!1 &1958937039
 GameObject:
@@ -37365,13 +37211,12 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1858294772}
   - {fileID: 1958937041}
-  - {fileID: 1913140721}
   - {fileID: 1404584967}
   - {fileID: 1025365141}
-  - {fileID: 2137144111}
+  - {fileID: 1913140721}
   - {fileID: 449716672}
+  - {fileID: 2137144111}
   - {fileID: 1256602665}
   - {fileID: 1923522842}
   - {fileID: 656392440}
-  - {fileID: 1276778506}
   - {fileID: 1979505314}

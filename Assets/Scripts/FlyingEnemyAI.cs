@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public class FlyingEnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
 
@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
 		agent.updateUpAxis = false; //Prevent automatic up axis realignment
 	}
 
-	private void Update()
+	void Update()
 	{
 		//This is where we change the target.
 		//There are other controls available.
