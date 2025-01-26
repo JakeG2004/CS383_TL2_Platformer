@@ -12,8 +12,11 @@ public class GroundEnemy : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 rayStart;
     private Vector3 rayOffset;
+    [SerializeField]
     private Transform player;
+    [SerializeField]
     private bool hasTarget;
+    private float damageTimer;
 
     private void Start()
     {
@@ -41,6 +44,7 @@ public class GroundEnemy : MonoBehaviour
         //now if enemy has a target, path towards if there's walkable ground
         //otherwise do a patrol path
         bool walkable = WalkableGround();
+        bool wall = WallInFront();
 
         if (hasTarget)
         {
@@ -48,9 +52,9 @@ public class GroundEnemy : MonoBehaviour
             //normalizing the distance
             moveDirection.x = (moveDirection.x / math.abs(moveDirection.x));
 
-            //if the ground is walkable, move towards the player
+            //if the ground is walkable and there's no wall, move towards the player
             //otherwise do nothing.
-            if (walkable)
+            if (walkable && !wall)
             {
                 transform.position += moveDirection * Time.deltaTime;
             }
@@ -61,7 +65,7 @@ public class GroundEnemy : MonoBehaviour
         {
 
             //no target, so patrol
-            if (!walkable)
+            if (!walkable || wall)
             {
                 //can't walk forward, so turn around
                 moveDirection.x *= -1;
@@ -71,8 +75,12 @@ public class GroundEnemy : MonoBehaviour
 
         }
 
-        Debug.DrawLine(rayStart, rayStart + (Vector3.down * rayDistance), Color.green);
+        rayStart = transform.position + rayOffset;
+        //draw ray that hits ground
+        Debug.DrawLine(rayStart, rayStart + (Vector3.down * rayDistance), Color.red);
 
+        //draw ray that hits wall
+        Debug.DrawLine(transform.position, transform.position + (Vector3.right * moveDirection.x * .51f), Color.red);
     }
 
     private bool WalkableGround()
@@ -89,17 +97,35 @@ public class GroundEnemy : MonoBehaviour
         return true;
     }
 
+    private bool WallInFront()
+    {
+
+        rayStart = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(rayStart, Vector2.right * moveDirection.x, .51f, LayerMask.GetMask("Ground"));
+
+        if (hit.collider == null)
+        {
+            return false;
+        }
+
+        return true;
+
+    }
+
+
     private void CheckTargetValidity()
     {
 
         Vector3 localPos = player.position - transform.position;
         localPos.y = 0;
+        localPos.z = 0;
         float distSqr = math.lengthsq(localPos);
 
         //if out of view range, nothing to do.
         if (distSqr > viewDistance * viewDistance)
         {
             //no target
+            rayDistance = 1;
             hasTarget = false;
             return;
         }
@@ -108,11 +134,38 @@ public class GroundEnemy : MonoBehaviour
         if (math.abs(((localPos.x / math.abs(localPos.x)) - (moveDirection.x / math.abs(moveDirection.x)))) < .001f)
         {
             hasTarget = true;
+            //makes it so that enemy can follow player down to lower levels.
+            rayDistance = 2f;
         }
         
 
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision 2d");
+        Debug.Log("Tag: " + collision.collider.tag);
+        if (collision.collider.tag.ToLower() == "stomp")
+        {
+            gameObject.SetActive(false);
+        }
+        else if (collision.collider.tag == "Player")
+        {
+            collision.collider.gameObject.GetComponent<PlayerController>().TakeDamage(10);
+        }
+
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.ToLower() == "stomp")
+        {
+            gameObject.SetActive(false);
+        }
+
+    }
 
 
 }

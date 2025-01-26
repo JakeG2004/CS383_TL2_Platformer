@@ -27,12 +27,12 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     
     bool facingRight = true;
+
     //Starting position
     private Vector2 _startingPosition;
 
     //Health
     public Image healthBar;
-    public CanvasGroup gameOverCanvas;
     private float healthAmount = 100f;
     private float damage = 50f;
 
@@ -40,8 +40,7 @@ public class PlayerController : MonoBehaviour
     private bool bcMode = false;
 
 
-
-
+    private Vector2 _lastPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,8 +55,6 @@ public class PlayerController : MonoBehaviour
         // Assign Animator component
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
-        
 
         //Save starting position
         _startingPosition = transform.position;
@@ -65,13 +62,10 @@ public class PlayerController : MonoBehaviour
         //Initialize health bar
         healthBar.fillAmount = healthAmount / 100f;
 
-        //Initially make game over canvas invisible
-        gameOverCanvas.alpha = 0f;
-        gameOverCanvas.interactable = false;
-        gameOverCanvas.blocksRaycasts = false;
-
         //Load BC mode setting check (jillian)
         UpdateBCMode();
+
+        _lastPos = _startingPosition;
     }
 
     // Update is called once per frame
@@ -81,11 +75,6 @@ public class PlayerController : MonoBehaviour
         CheckGround();
 
         UpdateBCMode(); //checks if exist (jillian)
-
-        if(Input.GetKeyDown("r") || Input.GetButtonDown("Submit"))
-        {
-            ExitGameOver();
-        }
 
 
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
@@ -115,27 +104,26 @@ public class PlayerController : MonoBehaviour
     {
         // Handle horizontal movement
         _move = Input.GetAxis("Horizontal");
-        if(_move < 0)
+        if(_move != 0)
         {
-            _rb.linearVelocityX = -1 * _maxSpeed;
-            
-            if(facingRight){
+            if ((_move > 0 && !facingRight) || (_move < 0 && facingRight))
+            {
                 Flip();
             }
-            animator.SetBool("IsRunning", true);
-        }
 
-        else if(_move > 0)
-        {
-            _rb.linearVelocityX = _maxSpeed;
-            if(!facingRight){
-                Flip();
-            }
+            _rb.linearVelocityX = _maxSpeed * _move;
+
             animator.SetBool("IsRunning", true);
+
+            // Player stuck
+            if(_lastPos == new Vector2(transform.position.x, transform.position.y))
+            {
+                transform.position = new Vector2(transform.position.x + (_rb.linearVelocityX * Time.deltaTime), transform.position.y + 0.01f);
+            }
+
+            _lastPos = transform.position;
+        }
         
-
-           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
-        }
         // Lerp to zero velocity
         else
         {
@@ -146,7 +134,7 @@ public class PlayerController : MonoBehaviour
         // Handle vertical movement
         if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
         {
-            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
+            _rb.linearVelocityY = _jumpForce;
             
         }
     }
@@ -170,34 +158,42 @@ public class PlayerController : MonoBehaviour
                 // End animation for jumping
                 animator.SetBool("IsJumping", false);
             }
+
             else
             {
                 _isGrounded = false;
                 animator.SetBool("IsJumping", true);
             }
-        
         }
+
         else
         {
             _isGrounded = false;
         }
     }
 
-    void Flip(){
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
-
+    void Flip()
+    {
+        // Toggle facingRight
         facingRight = !facingRight;
+
+        // Flip the player's scale
+        /*Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // Invert the x-scale
+        gameObject.transform.localScale = currentScale;*/
+
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
     public void Hurt()
     {
-        if(!bcMode){
-        //Change player's color to red upon impact
-        GetComponent<SpriteRenderer>().color = Color.red;
-        animator.SetTrigger("TriggerHurt");
-        TakeDamage(damage);
+        // Populate
+        Debug.Log("Player hurt");
+
+        if(!bcMode)
+        {
+            animator.SetTrigger("TriggerHurt");
+            TakeDamage(damage);
         }
     }
 
@@ -224,13 +220,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void ExitGameOver()
-    {
-        gameOverCanvas.alpha = 0f;
-        gameOverCanvas.interactable = false;
-        gameOverCanvas.blocksRaycasts = false;
-    }
-
     void ResetToStart()
     {
         transform.position = _startingPosition;
@@ -238,5 +227,5 @@ public class PlayerController : MonoBehaviour
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
     }
-
+        
 }
