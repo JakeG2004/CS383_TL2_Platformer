@@ -7,6 +7,8 @@ public class CollisionEvent : MonoBehaviour
 
     [SerializeField] private string _collideTag = "Player";
 
+    // Test comment
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.collider.CompareTag(_collideTag))
@@ -21,6 +23,8 @@ public class CollisionEvent : MonoBehaviour
         if (col.CompareTag(_collideTag))
         {
             _collisionEvent.Invoke();
+            CoinManager.Instance.AddCoin();
+            gameObject.SetActive(false);
         }
     }
 }

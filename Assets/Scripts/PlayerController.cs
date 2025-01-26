@@ -22,21 +22,25 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb = null;
     private bool _isGrounded = false;
 
+    // Animator
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    
+    bool facingRight = true;
+
     //Starting position
     private Vector2 _startingPosition;
 
     //Health
     public Image healthBar;
-    public CanvasGroup gameOverCanvas;
     private float healthAmount = 100f;
     private float damage = 50f;
 
     //BC Mode
-    private bool bc = false;
+    private bool bcMode = false;
 
 
-
-
+    private Vector2 _lastPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,16 +52,20 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Failed to get rigidbody!");
         }
 
+        // Assign Animator component
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         //Save starting position
         _startingPosition = transform.position;
 
         //Initialize health bar
         healthBar.fillAmount = healthAmount / 100f;
 
-        //Initially make game over canvas invisible
-        gameOverCanvas.alpha = 0f;
-        gameOverCanvas.interactable = false;
-        gameOverCanvas.blocksRaycasts = false;
+        //Load BC mode setting check (jillian)
+        UpdateBCMode();
+
+        _lastPos = _startingPosition;
     }
 
     // Update is called once per frame
@@ -65,14 +73,17 @@ public class PlayerController : MonoBehaviour
     {
         GetPlayerMovement();
         CheckGround();
-        if(Input.GetKeyDown("r") || Input.GetButtonDown("Submit"))
-        {
-            ExitGameOver();
-        }
+
+        UpdateBCMode(); //checks if exist (jillian)
+
 
         if(transform.position.y < _fallThreshold || healthAmount <= 0)
         {
-            if(bc)
+            ResetToStart();
+            TriggerGameOver();
+
+            /*
+            if(bcMode)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -81,8 +92,9 @@ public class PlayerController : MonoBehaviour
                 ResetToStart();
                 TriggerGameOver();
             }
+            */
         }
-        if (Input.GetKey("escape"))
+        if (Input.GetKey(KeyCode.Q))
         {
             Application.Quit();
         }
@@ -94,20 +106,35 @@ public class PlayerController : MonoBehaviour
         _move = Input.GetAxis("Horizontal");
         if(_move != 0)
         {
-           _rb.linearVelocity = new Vector2(_move*_maxSpeed,_rb.linearVelocity.y);
-         
+            if ((_move > 0 && !facingRight) || (_move < 0 && facingRight))
+            {
+                Flip();
+            }
+
+            _rb.linearVelocityX = _maxSpeed * _move;
+
+            animator.SetBool("IsRunning", true);
+
+            // Player stuck
+            if(_lastPos == new Vector2(transform.position.x, transform.position.y))
+            {
+                transform.position = new Vector2(transform.position.x + (_rb.linearVelocityX * Time.deltaTime), transform.position.y + 0.01f);
+            }
+
+            _lastPos = transform.position;
         }
         
         // Lerp to zero velocity
         else
         {
             _rb.linearVelocityX = Mathf.Lerp(_rb.linearVelocityX, 0.0f, Time.deltaTime * _friction);
+            animator.SetBool("IsRunning", false);
         }
 
         // Handle vertical movement
         if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
         {
-            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
+            _rb.linearVelocityY = _jumpForce;
             
         }
     }
@@ -127,11 +154,15 @@ public class PlayerController : MonoBehaviour
             if(groundDist < (transform.localScale.y / 2) + 0.1f)
             {
                 _isGrounded = true;
+
+                // End animation for jumping
+                animator.SetBool("IsJumping", false);
             }
 
             else
             {
                 _isGrounded = false;
+                animator.SetBool("IsJumping", true);
             }
         }
 
@@ -140,34 +171,53 @@ public class PlayerController : MonoBehaviour
             _isGrounded = false;
         }
     }
+
+    void Flip()
+    {
+        // Toggle facingRight
+        facingRight = !facingRight;
+
+        // Flip the player's scale
+        /*Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // Invert the x-scale
+        gameObject.transform.localScale = currentScale;*/
+
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+    }
+
     public void Hurt()
     {
-        //Change player's color to red upon impact
-        GetComponent<SpriteRenderer>().color = Color.red;
+        // Populate
+        Debug.Log("Player hurt");
 
-        TakeDamage(damage);
+        if(!bcMode)
+        {
+            animator.SetTrigger("TriggerHurt");
+            TakeDamage(damage);
+        }
     }
 
     public void TakeDamage(float damage)
     {
-        healthAmount -= damage;
-        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-        healthBar.fillAmount = healthAmount / 100f;
-        _maxSpeed = 7f;
+        if(!bcMode){ //(jillian)
+            healthAmount -= damage;
+            healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+            healthBar.fillAmount = healthAmount / 100f;
+            _maxSpeed = 7f;
+        }
     }
 
+    private void UpdateBCMode(){
+        bcMode = PlayerPrefs.GetInt("BCMode", 0) == 1;
+    }
     void TriggerGameOver()
     {
-        gameOverCanvas.alpha = 1f;
-        gameOverCanvas.interactable = true;
-        gameOverCanvas.blocksRaycasts = true;
-    }
+        //gameOverCanvas.alpha = 1f;
+        //gameOverCanvas.interactable = true;
+        //gameOverCanvas.blocksRaycasts = true;
 
-    void ExitGameOver()
-    {
-        gameOverCanvas.alpha = 0f;
-        gameOverCanvas.interactable = false;
-        gameOverCanvas.blocksRaycasts = false;
+        SceneManager.LoadScene(2); //(andrew)
+
     }
 
     void ResetToStart()
@@ -177,5 +227,5 @@ public class PlayerController : MonoBehaviour
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
     }
-
+        
 }
