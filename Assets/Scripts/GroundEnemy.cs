@@ -144,15 +144,13 @@ public class GroundEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision 2d");
-        Debug.Log("Tag: " + collision.collider.tag);
         if (collision.collider.tag.ToLower() == "stomp")
         {
             gameObject.SetActive(false);
         }
         else if (collision.collider.tag == "Player")
         {
-            collision.collider.gameObject.GetComponent<PlayerController>().TakeDamage(10);
+            collision.collider.gameObject.GetComponent<PlayerController>().Hurt(10);
         }
 
 
