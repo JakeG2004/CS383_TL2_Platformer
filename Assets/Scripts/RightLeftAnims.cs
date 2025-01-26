@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovementSerializer : MonoBehaviour
+public class RightLeftAnims : MonoBehaviour
 {
     private Animator animator; // Reference to the Animator component
 
