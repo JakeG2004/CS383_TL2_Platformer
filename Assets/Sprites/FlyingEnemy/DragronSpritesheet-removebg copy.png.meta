@@ -1,0 +1,1521 @@
+fileFormatVersion: 2
+guid: c1aeccccd13b2425382b535411d15623
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5505141592706070787
+    second: DragronSpritesheet-removebg copy_0
+  - first:
+      213: -8438393889873171599
+    second: DragronSpritesheet-removebg copy_1
+  - first:
+      213: -5844874261026012631
+    second: DragronSpritesheet-removebg copy_2
+  - first:
+      213: 3521403014013516316
+    second: DragronSpritesheet-removebg copy_3
+  - first:
+      213: 4987591472871089220
+    second: DragronSpritesheet-removebg copy_4
+  - first:
+      213: 6296554927393288667
+    second: DragronSpritesheet-removebg copy_5
+  - first:
+      213: 4121699888876851683
+    second: DragronSpritesheet-removebg copy_6
+  - first:
+      213: 4153534158055917522
+    second: DragronSpritesheet-removebg copy_7
+  - first:
+      213: -5757943622756800396
+    second: DragronSpritesheet-removebg copy_8
+  - first:
+      213: 4053985206053446770
+    second: DragronSpritesheet-removebg copy_9
+  - first:
+      213: -2331510898539462513
+    second: DragronSpritesheet-removebg copy_10
+  - first:
+      213: 8695231582771902408
+    second: DragronSpritesheet-removebg copy_11
+  - first:
+      213: 1055919163884852663
+    second: DragronSpritesheet-removebg copy_12
+  - first:
+      213: 5591857787487492569
+    second: DragronSpritesheet-removebg copy_13
+  - first:
+      213: 2506169147239095585
+    second: DragronSpritesheet-removebg copy_14
+  - first:
+      213: -3135606426464638018
+    second: DragronSpritesheet-removebg copy_15
+  - first:
+      213: -7411089230008466145
+    second: DragronSpritesheet-removebg copy_16
+  - first:
+      213: -5129283462083917560
+    second: DragronSpritesheet-removebg copy_17
+  - first:
+      213: 4562503235677585730
+    second: DragronSpritesheet-removebg copy_18
+  - first:
+      213: -4809754956556677643
+    second: DragronSpritesheet-removebg copy_19
+  - first:
+      213: -9126612784373744254
+    second: DragronSpritesheet-removebg copy_20
+  - first:
+      213: -7838520516484347000
+    second: DragronSpritesheet-removebg copy_21
+  - first:
+      213: -9148881289627700178
+    second: DragronSpritesheet-removebg copy_22
+  - first:
+      213: 2542733625411318346
+    second: DragronSpritesheet-removebg copy_23
+  - first:
+      213: -719194174445544537
+    second: DragronSpritesheet-removebg copy_24
+  - first:
+      213: 308001978811652037
+    second: DragronSpritesheet-removebg copy_25
+  - first:
+      213: -6231345300490224396
+    second: DragronSpritesheet-removebg copy_26
+  - first:
+      213: -8018893973938753922
+    second: DragronSpritesheet-removebg copy_27
+  - first:
+      213: -6729553272261316028
+    second: DragronSpritesheet-removebg copy_28
+  - first:
+      213: 4003301762781012764
+    second: DragronSpritesheet-removebg copy_29
+  - first:
+      213: -8202835925448920666
+    second: DragronSpritesheet-removebg copy_30
+  - first:
+      213: 5077832778876820636
+    second: DragronSpritesheet-removebg copy_31
+  - first:
+      213: -3006079594797188913
+    second: DragronSpritesheet-removebg copy_32
+  - first:
+      213: -1167660627023951527
+    second: DragronSpritesheet-removebg copy_33
+  - first:
+      213: -1125264549949743264
+    second: DragronSpritesheet-removebg copy_34
+  - first:
+      213: 7306090703764067242
+    second: DragronSpritesheet-removebg copy_35
+  - first:
+      213: -3651912882567420556
+    second: DragronSpritesheet-removebg copy_36
+  - first:
+      213: -2267944798447644566
+    second: DragronSpritesheet-removebg copy_37
+  - first:
+      213: 7180092397398408660
+    second: DragronSpritesheet-removebg copy_38
+  - first:
+      213: 1992891548183271078
+    second: DragronSpritesheet-removebg copy_39
+  - first:
+      213: 2723847126616769221
+    second: DragronSpritesheet-removebg copy_40
+  - first:
+      213: 8991261169976035707
+    second: DragronSpritesheet-removebg copy_41
+  - first:
+      213: -8489294671079865693
+    second: DragronSpritesheet-removebg copy_42
+  - first:
+      213: -8070818867388545613
+    second: DragronSpritesheet-removebg copy_43
+  - first:
+      213: 6859249818876818550
+    second: DragronSpritesheet-removebg copy_44
+  - first:
+      213: 1942843656419503388
+    second: DragronSpritesheet-removebg copy_45
+  - first:
+      213: 7376675021205468402
+    second: DragronSpritesheet-removebg copy_46
+  - first:
+      213: -7130310988100363571
+    second: DragronSpritesheet-removebg copy_47
+  - first:
+      213: -8176566988393343459
+    second: DragronSpritesheet-removebg copy_48
+  - first:
+      213: 1324477815404664110
+    second: DragronSpritesheet-removebg copy_49
+  - first:
+      213: 3992647515532593463
+    second: DragronSpritesheet-removebg copy_50
+  - first:
+      213: 6910007873374704546
+    second: DragronSpritesheet-removebg copy_51
+  - first:
+      213: 4511405906986059432
+    second: DragronSpritesheet-removebg copy_52
+  - first:
+      213: 4113938227276547541
+    second: DragronSpritesheet-removebg copy_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1440
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309397f6c11366c40800000000000000
+      internalID: 5505141592706070787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 652
+        width: 73
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b6847377dc4ea80800000000000000
+      internalID: -8438393889873171599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 236
+        width: 82
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92288bab3d5d2eea0800000000000000
+      internalID: -5844874261026012631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 524
+        width: 79
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1af34152698ed030800000000000000
+      internalID: 3521403014013516316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 396
+        width: 81
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444af39e40c773540800000000000000
+      internalID: 4987591472871089220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 108
+        width: 85
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1330c885bd16750800000000000000
+      internalID: 6296554927393288667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_6
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 91
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e195431638333930800000000000000
+      internalID: 4121699888876851683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 695
+        width: 52
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7cf557f4154a930800000000000000
+      internalID: 4153534158055917522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_8
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 279
+        width: 46
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478ead038cca710b0800000000000000
+      internalID: -5757943622756800396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_9
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 556
+        width: 60
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2742183e016a24830800000000000000
+      internalID: 4053985206053446770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_10
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 419
+        width: 63
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f808a9ec03fc4afd0800000000000000
+      internalID: -2331510898539462513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_11
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 140
+        width: 54
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c770e22e0baba870800000000000000
+      internalID: 8695231582771902408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_12
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 74
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b552e292e067ae00800000000000000
+      internalID: 1055919163884852663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_13
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 279
+        width: 59
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d991b1e7054a9d40800000000000000
+      internalID: 5591857787487492569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 588
+        width: 103
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dda38af83b7c220800000000000000
+      internalID: 2506169147239095585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_15
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 75
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebba42b71961c74d0800000000000000
+      internalID: -3135606426464638018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_16
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 140
+        width: 56
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f154f966c95862990800000000000000
+      internalID: -7411089230008466145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_17
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 279
+        width: 93
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809c33a0edf11d8b0800000000000000
+      internalID: -5129283462083917560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 556
+        width: 65
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24102290584415f30800000000000000
+      internalID: 4562503235677585730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_19
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 236
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdc3c5a951504db0800000000000000
+      internalID: -4809754956556677643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_20
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 44
+        width: 81
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d3dd80702c75180800000000000000
+      internalID: -9126612784373744254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_21
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 0
+        width: 59
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88bc65ade1bf73390800000000000000
+      internalID: -7838520516484347000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_22
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 281
+        width: 78
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24f58f90f4a80180800000000000000
+      internalID: -9148881289627700178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 52
+        width: 62
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a423515a2ca994320800000000000000
+      internalID: 2542733625411318346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_24
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 268
+        width: 259
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab94a375b8e406f0800000000000000
+      internalID: -719194174445544537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_25
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 330
+        width: 217
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c79f29fa2e364400800000000000000
+      internalID: 308001978811652037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_26
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 242
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcfa7bd670d589a0800000000000000
+      internalID: -6231345300490224396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_27
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 191
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e2cd7aa6a27b090800000000000000
+      internalID: -8018893973938753922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_28
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 748
+        width: 165
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442fbcd14f2db92a0800000000000000
+      internalID: -6729553272261316028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_29
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 172
+        width: 165
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13e14b2eb59e8730800000000000000
+      internalID: 4003301762781012764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_30
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 340
+        width: 235
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1fdc0bf2ca92e80800000000000000
+      internalID: -8202835925448920666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_31
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 10
+        width: 241
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c99c54206187640800000000000000
+      internalID: 5077832778876820636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_32
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 716
+        width: 188
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8309119824846d0800000000000000
+      internalID: -3006079594797188913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_33
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 460
+        width: 183
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9590704a8d2abcfe0800000000000000
+      internalID: -1167660627023951527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_34
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 140
+        width: 183
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06fd7ed8ad14260f0800000000000000
+      internalID: -1125264549949743264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_35
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 0
+        width: 184
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa314a629c2746560800000000000000
+      internalID: 7306090703764067242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_36
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 502
+        width: 238
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47565ebf49cc15dc0800000000000000
+      internalID: -3651912882567420556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_37
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 239
+        width: 239
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60555ec834a680e0800000000000000
+      internalID: -2267944798447644566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_38
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 231
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd3a616effc4a360800000000000000
+      internalID: 7180092397398408660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_39
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 405
+        width: 230
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a69755ed4c28ab10800000000000000
+      internalID: 1992891548183271078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_40
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 151
+        width: 219
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c20674b78c0dc520800000000000000
+      internalID: 2723847126616769221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_41
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 0
+        width: 184
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b794f27756067cc70800000000000000
+      internalID: 8991261169976035707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_42
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 76
+        width: 257
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a20ba09977ff2a80800000000000000
+      internalID: -8489294671079865693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_43
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 204
+        width: 253
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b509ca4001beff80800000000000000
+      internalID: -8070818867388545613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_44
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 0
+        width: 249
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674b0df4e53f03f50800000000000000
+      internalID: 6859249818876818550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_45
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d610b030e56fa10800000000000000
+      internalID: 1942843656419503388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_46
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 724
+        width: 179
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4f27639d63f5660800000000000000
+      internalID: 7376675021205468402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_47
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 468
+        width: 179
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca96303feb0c0d90800000000000000
+      internalID: -7130310988100363571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_48
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 87
+        width: 227
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1611a635aff68e80800000000000000
+      internalID: -8176566988393343459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_49
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 223
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2594144e8d716210800000000000000
+      internalID: 1324477815404664110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_50
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 460
+        width: 188
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7398aace2cbb86730800000000000000
+      internalID: 3992647515532593463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_51
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 171
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3d6afcc8745ef50800000000000000
+      internalID: 6910007873374704546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_52
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 620
+        width: 181
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6c08b15cbbb9e30800000000000000
+      internalID: 4511405906986059432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragronSpritesheet-removebg copy_53
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 0
+        width: 97
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d508b86505a71930800000000000000
+      internalID: 4113938227276547541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DragronSpritesheet-removebg copy_0: 5505141592706070787
+      DragronSpritesheet-removebg copy_1: -8438393889873171599
+      DragronSpritesheet-removebg copy_10: -2331510898539462513
+      DragronSpritesheet-removebg copy_11: 8695231582771902408
+      DragronSpritesheet-removebg copy_12: 1055919163884852663
+      DragronSpritesheet-removebg copy_13: 5591857787487492569
+      DragronSpritesheet-removebg copy_14: 2506169147239095585
+      DragronSpritesheet-removebg copy_15: -3135606426464638018
+      DragronSpritesheet-removebg copy_16: -7411089230008466145
+      DragronSpritesheet-removebg copy_17: -5129283462083917560
+      DragronSpritesheet-removebg copy_18: 4562503235677585730
+      DragronSpritesheet-removebg copy_19: -4809754956556677643
+      DragronSpritesheet-removebg copy_2: -5844874261026012631
+      DragronSpritesheet-removebg copy_20: -9126612784373744254
+      DragronSpritesheet-removebg copy_21: -7838520516484347000
+      DragronSpritesheet-removebg copy_22: -9148881289627700178
+      DragronSpritesheet-removebg copy_23: 2542733625411318346
+      DragronSpritesheet-removebg copy_24: -719194174445544537
+      DragronSpritesheet-removebg copy_25: 308001978811652037
+      DragronSpritesheet-removebg copy_26: -6231345300490224396
+      DragronSpritesheet-removebg copy_27: -8018893973938753922
+      DragronSpritesheet-removebg copy_28: -6729553272261316028
+      DragronSpritesheet-removebg copy_29: 4003301762781012764
+      DragronSpritesheet-removebg copy_3: 3521403014013516316
+      DragronSpritesheet-removebg copy_30: -8202835925448920666
+      DragronSpritesheet-removebg copy_31: 5077832778876820636
+      DragronSpritesheet-removebg copy_32: -3006079594797188913
+      DragronSpritesheet-removebg copy_33: -1167660627023951527
+      DragronSpritesheet-removebg copy_34: -1125264549949743264
+      DragronSpritesheet-removebg copy_35: 7306090703764067242
+      DragronSpritesheet-removebg copy_36: -3651912882567420556
+      DragronSpritesheet-removebg copy_37: -2267944798447644566
+      DragronSpritesheet-removebg copy_38: 7180092397398408660
+      DragronSpritesheet-removebg copy_39: 1992891548183271078
+      DragronSpritesheet-removebg copy_4: 4987591472871089220
+      DragronSpritesheet-removebg copy_40: 2723847126616769221
+      DragronSpritesheet-removebg copy_41: 8991261169976035707
+      DragronSpritesheet-removebg copy_42: -8489294671079865693
+      DragronSpritesheet-removebg copy_43: -8070818867388545613
+      DragronSpritesheet-removebg copy_44: 6859249818876818550
+      DragronSpritesheet-removebg copy_45: 1942843656419503388
+      DragronSpritesheet-removebg copy_46: 7376675021205468402
+      DragronSpritesheet-removebg copy_47: -7130310988100363571
+      DragronSpritesheet-removebg copy_48: -8176566988393343459
+      DragronSpritesheet-removebg copy_49: 1324477815404664110
+      DragronSpritesheet-removebg copy_5: 6296554927393288667
+      DragronSpritesheet-removebg copy_50: 3992647515532593463
+      DragronSpritesheet-removebg copy_51: 6910007873374704546
+      DragronSpritesheet-removebg copy_52: 4511405906986059432
+      DragronSpritesheet-removebg copy_53: 4113938227276547541
+      DragronSpritesheet-removebg copy_6: 4121699888876851683
+      DragronSpritesheet-removebg copy_7: 4153534158055917522
+      DragronSpritesheet-removebg copy_8: -5757943622756800396
+      DragronSpritesheet-removebg copy_9: 4053985206053446770
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
