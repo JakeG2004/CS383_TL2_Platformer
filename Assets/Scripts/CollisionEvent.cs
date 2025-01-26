@@ -23,6 +23,8 @@ public class CollisionEvent : MonoBehaviour
         if (col.CompareTag(_collideTag))
         {
             _collisionEvent.Invoke();
+            CoinManager.Instance.AddCoin();
+            gameObject.SetActive(false);
         }
     }
 }
