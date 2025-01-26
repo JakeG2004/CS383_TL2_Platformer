@@ -14,7 +14,7 @@ public class CollisionEvent : MonoBehaviour
         if (col.collider.CompareTag(_collideTag))
         {
             _collisionEvent.Invoke();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 
@@ -23,8 +23,8 @@ public class CollisionEvent : MonoBehaviour
         if (col.CompareTag(_collideTag))
         {
             _collisionEvent.Invoke();
-            CoinManager.Instance.AddCoin();
-            gameObject.SetActive(false);
+            //CoinManager.Instance.AddCoin();
+            //gameObject.SetActive(false);
         }
     }
 }

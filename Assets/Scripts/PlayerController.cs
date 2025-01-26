@@ -185,15 +185,17 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
-    public void Hurt()
+    public void Hurt(int curDamage)
     {
         // Populate
         Debug.Log("Player hurt");
 
+        animator.SetTrigger("TriggerHurt");
+
         if(!bcMode)
         {
-            animator.SetTrigger("TriggerHurt");
-            TakeDamage(damage);
+            //animator.SetTrigger("TriggerHurt");
+            TakeDamage(curDamage);
         }
     }
 
