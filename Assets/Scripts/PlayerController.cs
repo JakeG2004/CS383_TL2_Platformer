@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
                 TriggerGameOver();
             }
         }
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Q))
         {
             Application.Quit();
         }
@@ -155,9 +155,11 @@ public class PlayerController : MonoBehaviour
 
     void TriggerGameOver()
     {
-        gameOverCanvas.alpha = 1f;
-        gameOverCanvas.interactable = true;
-        gameOverCanvas.blocksRaycasts = true;
+        //gameOverCanvas.alpha = 1f;
+        //gameOverCanvas.interactable = true;
+        //gameOverCanvas.blocksRaycasts = true;
+
+        SceneManager.LoadScene(2);
     }
 
     void ResetToStart()
