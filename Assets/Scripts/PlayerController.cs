@@ -40,8 +40,7 @@ public class PlayerController : MonoBehaviour
     private bool bcMode = false;
 
 
-
-
+    private Vector2 _lastPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,9 +56,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        
-        
-
         //Save starting position
         _startingPosition = transform.position;
 
@@ -68,6 +64,8 @@ public class PlayerController : MonoBehaviour
 
         //Load BC mode setting check (jillian)
         UpdateBCMode();
+
+        _lastPos = _startingPosition;
     }
 
     // Update is called once per frame
@@ -108,16 +106,22 @@ public class PlayerController : MonoBehaviour
         _move = Input.GetAxis("Horizontal");
         if(_move != 0)
         {
-            float newVelX = _maxSpeed * _move;
-
             if ((_move > 0 && !facingRight) || (_move < 0 && facingRight))
             {
                 Flip();
             }
 
-            _rb.linearVelocityX = newVelX;
+            _rb.linearVelocityX = _maxSpeed * _move;
 
             animator.SetBool("IsRunning", true);
+
+            // Player stuck
+            if(_lastPos == new Vector2(transform.position.x, transform.position.y))
+            {
+                transform.position = new Vector2(transform.position.x + (_rb.linearVelocityX * Time.deltaTime), transform.position.y + 0.01f);
+            }
+
+            _lastPos = transform.position;
         }
         
         // Lerp to zero velocity
@@ -130,7 +134,7 @@ public class PlayerController : MonoBehaviour
         // Handle vertical movement
         if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
         {
-            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
+            _rb.linearVelocityY = _jumpForce;
             
         }
     }
@@ -174,9 +178,11 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
 
         // Flip the player's scale
-        Vector3 currentScale = gameObject.transform.localScale;
+        /*Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1; // Invert the x-scale
-        gameObject.transform.localScale = currentScale;
+        gameObject.transform.localScale = currentScale;*/
+
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
     public void Hurt()

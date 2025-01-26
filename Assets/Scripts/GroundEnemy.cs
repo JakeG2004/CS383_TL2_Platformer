@@ -125,6 +125,7 @@ public class GroundEnemy : MonoBehaviour
         if (distSqr > viewDistance * viewDistance)
         {
             //no target
+            rayDistance = 1;
             hasTarget = false;
             return;
         }
@@ -133,17 +134,10 @@ public class GroundEnemy : MonoBehaviour
         if (math.abs(((localPos.x / math.abs(localPos.x)) - (moveDirection.x / math.abs(moveDirection.x)))) < .001f)
         {
             hasTarget = true;
+            //makes it so that enemy can follow player down to lower levels.
+            rayDistance = 2f;
         }
         
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-
-
-        Debug.Log("Collision");
-
 
     }
 
@@ -170,14 +164,6 @@ public class GroundEnemy : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-
-    }
-
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        
-
 
     }
 
