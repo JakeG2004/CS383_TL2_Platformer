@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 //THIS SCRIPT IS FOR THE PAUSE MENUUUUUU YUHHYHHHHHH
 public class PauseManager : MonoBehaviour
@@ -20,7 +21,7 @@ public class PauseManager : MonoBehaviour
 
     void Update(){
         _select = Input.GetAxis("Vertical");
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Submit")){
+        if(Input.GetKeyDown(KeyCode.Escape) || (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)){
             EventSystem.current.SetSelectedGameObject(ResumeButton);
             ButtonSelect = 1;
             //ResumeButton.color = HighlightedColor;
