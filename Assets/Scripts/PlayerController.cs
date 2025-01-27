@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -104,6 +105,17 @@ public class PlayerController : MonoBehaviour
     {
         // Handle horizontal movement
         _move = Input.GetAxis("Horizontal");
+        
+        // Take input from gamepad if it's being used
+        if( Gamepad.current != null )
+        {
+            float joystick = Gamepad.current.leftStick.x.ReadValue();
+            if( joystick != 0 )
+            {
+                _move = joystick;
+            }
+        }
+        // Movement
         if(_move != 0)
         {
             if ((_move > 0 && !facingRight) || (_move < 0 && facingRight))
@@ -132,10 +144,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // Handle vertical movement
-        if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
+        if((Input.GetKeyDown(_jump) || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)) && _isGrounded)
         {
             _rb.linearVelocityY = _jumpForce;
-            
         }
     }
 
