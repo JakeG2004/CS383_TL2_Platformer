@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 //THIS SCRIPT IS FOR THE PAUSE MENUUUUUU YUHHYHHHHHH
 public class PauseManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class PauseManager : MonoBehaviour
 
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Submit")){
+        if(Input.GetKeyDown(KeyCode.Escape) || (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)){
             if(isPaused){
                 resumeGame();
             }else{
