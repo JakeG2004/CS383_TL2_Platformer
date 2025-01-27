@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
     //Health
     public Image healthBar;
     private float healthAmount = 100f;
-    private float damage = 50f;
 
     //BC Mode
     private bool bcMode = false;
