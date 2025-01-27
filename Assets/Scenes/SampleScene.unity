@@ -42360,6 +42360,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4212208158023503136, guid: 42377269e86e8b763afc119958227ea7, type: 3}
   m_PrefabInstance: {fileID: 1923522842}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923522844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8854283602917204770, guid: 42377269e86e8b763afc119958227ea7, type: 3}
+  m_PrefabInstance: {fileID: 1923522842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923522845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8436107012590214460, guid: 42377269e86e8b763afc119958227ea7, type: 3}
+  m_PrefabInstance: {fileID: 1923522842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923522846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5731780387449178855, guid: 42377269e86e8b763afc119958227ea7, type: 3}
+  m_PrefabInstance: {fileID: 1923522842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1958937039
 GameObject:
   m_ObjectHideFlags: 0
@@ -42580,6 +42595,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1923522843}
+  ResumeButton: {fileID: 1923522846}
+  MenuButton: {fileID: 1923522845}
+  Quitbutton: {fileID: 1923522844}
 --- !u!114 &1958937048
 MonoBehaviour:
   m_ObjectHideFlags: 0
