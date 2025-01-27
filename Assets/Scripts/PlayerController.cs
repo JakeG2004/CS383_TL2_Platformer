@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     //Health
     public Image healthBar;
     private float healthAmount = 100f;
-    private float damage = 50f;
 
     //BC Mode
     private bool bcMode = false;
@@ -128,10 +127,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsRunning", true);
 
             // Player stuck
-            if(_lastPos == new Vector2(transform.position.x, transform.position.y))
-            {
-                transform.position = new Vector2(transform.position.x + (_rb.linearVelocityX * Time.deltaTime), transform.position.y + 0.01f);
-            }
+            //if(_lastPos == new Vector2(transform.position.x, transform.position.y));
+            //{
+                //transform.position = new Vector2(transform.position.x + (_rb.linearVelocityX * Time.deltaTime), (transform.position.y + 0.01f));
+            //}
 
             _lastPos = transform.position;
         }
