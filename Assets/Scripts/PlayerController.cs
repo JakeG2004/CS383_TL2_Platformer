@@ -41,6 +41,12 @@ public class PlayerController : MonoBehaviour
 
 
     private Vector2 _lastPos;
+
+    //Audio Variables
+    private AudioSource PlayerSFX;
+    public AudioClip[] JumpSound;
+    public AudioClip[] HitSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -66,6 +72,8 @@ public class PlayerController : MonoBehaviour
         UpdateBCMode();
 
         _lastPos = _startingPosition;
+
+        PlayerSFX = GameObject.FindWithTag("PlayerSFX").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -145,6 +153,7 @@ public class PlayerController : MonoBehaviour
         // Handle vertical movement
         if((Input.GetKeyDown(_jump) || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)) && _isGrounded)
         {
+            PlayJumpSound();
             _rb.linearVelocityY = _jumpForce;
         }
     }
@@ -204,6 +213,7 @@ public class PlayerController : MonoBehaviour
 
         if(!bcMode)
         {
+            PlayHurtSound();
             //animator.SetTrigger("TriggerHurt");
             TakeDamage(curDamage);
         }
@@ -239,5 +249,33 @@ public class PlayerController : MonoBehaviour
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
     }
-        
+    public void PlayHurtSound()
+    {
+        if (HitSound.Length > 0 && PlayerSFX != null)
+        {
+            int randomIndex = Random.Range(0, HitSound.Length);
+            AudioClip selectedClip = HitSound[randomIndex];
+
+            PlayerSFX.PlayOneShot(selectedClip);
+        }
+        else
+        {
+            Debug.LogWarning("Hit sound is not assigned");
+        }
+    }
+
+    public void PlayJumpSound()
+    {
+        if (JumpSound.Length > 0 && PlayerSFX != null)
+        {
+            int randomIndex = Random.Range(0, JumpSound.Length);
+            AudioClip selectedClip = JumpSound[randomIndex];
+
+            PlayerSFX.PlayOneShot(selectedClip);
+        }
+        else
+        {
+            Debug.LogWarning("Jump sound is not assigned");
+        }
+    }
 }

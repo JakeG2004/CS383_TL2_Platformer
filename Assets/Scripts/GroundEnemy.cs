@@ -17,9 +17,12 @@ public class GroundEnemy : MonoBehaviour
     [SerializeField]
     private bool hasTarget;
     private float damageTimer;
+    public AudioClip DeathSound;
+    AudioSource GameSFX;
 
     private void Start()
     {
+        GameSFX = GameObject.FindWithTag("GameSFXHandler").GetComponent<AudioSource>();
         rayOffset = new Vector3(raycastOffset.x, raycastOffset.y, 0);
         moveDirection = new Vector3(1, 0, 0);
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -146,6 +149,7 @@ public class GroundEnemy : MonoBehaviour
     {
         if (collision.collider.tag.ToLower() == "stomp")
         {
+            GameSFX.PlayOneShot(DeathSound);
             gameObject.SetActive(false);
         }
         else if (collision.collider.tag == "Player")
