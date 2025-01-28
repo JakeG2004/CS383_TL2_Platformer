@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour
     //BC Mode
     private bool bcMode = false;
 
+    //Audio Variables
+    public AudioSource PlayerSFX;
+    public AudioClip[] JumpSound;
+    public AudioClip[] HitSound;
+
 
 
 
@@ -130,6 +135,7 @@ public class PlayerController : MonoBehaviour
         // Handle vertical movement
         if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
         {
+            PlayJumpSound();
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
             
         }
@@ -186,6 +192,7 @@ public class PlayerController : MonoBehaviour
 
         if(!bcMode)
         {
+            PlayHurtSound();
             animator.SetTrigger("TriggerHurt");
             TakeDamage(damage);
         }
@@ -221,5 +228,35 @@ public class PlayerController : MonoBehaviour
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
     }
-        
+
+    public void PlayHurtSound()
+    {
+        if (HitSound.Length > 0 && PlayerSFX != null)
+        {
+            int randomIndex = Random.Range(0, HitSound.Length);
+            AudioClip selectedClip = HitSound[randomIndex];
+
+            PlayerSFX.PlayOneShot(selectedClip);
+        }
+        else
+        {
+            Debug.LogWarning("Hit sound is not assigned");
+        }
+    }
+
+    public void PlayJumpSound()
+    {
+        if (JumpSound.Length > 0 && PlayerSFX != null)
+        {
+            int randomIndex = Random.Range(0, JumpSound.Length);
+            AudioClip selectedClip = JumpSound[randomIndex];
+
+            PlayerSFX.PlayOneShot(selectedClip);
+        }
+        else
+        {
+            Debug.LogWarning("Jump sound is not assigned");
+        }
+    }
+
 }
