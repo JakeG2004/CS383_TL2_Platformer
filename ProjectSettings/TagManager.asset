@@ -7,6 +7,9 @@ TagManager:
   - Stomp
   - Enemy
   - Coin
+  - SFX Handler
+  - PlayerSFX
+  - GameSFXHandler
   layers:
   - Default
   - TransparentFX

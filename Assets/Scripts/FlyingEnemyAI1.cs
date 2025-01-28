@@ -7,6 +7,7 @@ public class FlyingEnemyAI1 : MonoBehaviour
     [SerializeField] private float _followRad = 25.0f; // Follow radius
     private NavMeshAgent agent;
 
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();

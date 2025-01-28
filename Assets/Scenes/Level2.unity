@@ -127,6 +127,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (6)
@@ -367,6 +395,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -496,6 +556,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (4)
@@ -1051,8 +1139,8 @@ GameObject:
   m_Component:
   - component: {fileID: 630781156}
   - component: {fileID: 630781155}
-  - component: {fileID: 630781154}
   - component: {fileID: 630781157}
+  - component: {fileID: 630781158}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1060,14 +1148,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &630781154
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630781153}
-  m_Enabled: 1
 --- !u!20 &630781155
 Camera:
   m_ObjectHideFlags: 0
@@ -1166,6 +1246,50 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &630781158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630781153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &664981423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,6 +1298,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (1)
@@ -1445,6 +1597,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (7)
@@ -1507,6 +1687,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (8)
@@ -1710,6 +1918,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (2)
@@ -1772,6 +2008,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120067752}
     m_Modifications:
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1616684547}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayRandomSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 649109626199009748, guid: add44b65edf854978ab293c85c28e20b, type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4615314637674380930, guid: add44b65edf854978ab293c85c28e20b, type: 3}
       propertyPath: m_Name
       value: Coin (3)
@@ -73094,6 +73358,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c4d9980ca56204d9ad3c57513d17c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1616684547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8095997306015909869, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+  m_PrefabInstance: {fileID: 2100156905408810959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99a7b2842e33614990db459929a0559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1927705846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73327,6 +73602,38 @@ PrefabInstance:
       propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1399823499}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: HitSound.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: JumpSound.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: 'HitSound.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f4184fefd14be04b913190612c15e33, type: 3}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: 'HitSound.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a548950ba4cffa4497da2fb85312b63, type: 3}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: 'HitSound.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 515c5c500440e644e9c31c59021f3681, type: 3}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: 'JumpSound.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c65653968118beb499a4b0ed47975f51, type: 3}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: 'JumpSound.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d3ae43ddcdcdd94eb9c7b56e7c048cd, type: 3}
+    - target: {fileID: 259738034377173788, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
+      propertyPath: 'JumpSound.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c0b161d05de583a4d874d675008b1f19, type: 3}
     - target: {fileID: 7797677546494208202, guid: 3d17254d9fcc25c69a8969c73d7ec1a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.73
@@ -73498,6 +73805,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2100156905408810959
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2832165828501589851, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_TagString
+      value: PlayerSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.160937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.2093096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.12669429
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058134688439752290, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317075386658269795, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
+      propertyPath: m_Name
+      value: SFXHandler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bf631eae1d149145825f0584a96bdd4, type: 3}
 --- !u!114 &6812931466619866204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73581,3 +73949,4 @@ SceneRoots:
   - {fileID: 141338259}
   - {fileID: 1149206374}
   - {fileID: 1989656902}
+  - {fileID: 2100156905408810959}

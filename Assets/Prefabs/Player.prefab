@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1587185967756906398}
   - component: {fileID: 3456480504468179399}
   - component: {fileID: 93471411615474184}
+  - component: {fileID: 7829466744688048361}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -114,6 +115,14 @@ MonoBehaviour:
   _friction: 10
   _fallThreshold: -10
   healthBar: {fileID: 7265762561978416682}
+  JumpSound:
+  - {fileID: 8300000, guid: c65653968118beb499a4b0ed47975f51, type: 3}
+  - {fileID: 8300000, guid: 3d3ae43ddcdcdd94eb9c7b56e7c048cd, type: 3}
+  - {fileID: 8300000, guid: c0b161d05de583a4d874d675008b1f19, type: 3}
+  HitSound:
+  - {fileID: 8300000, guid: 2f4184fefd14be04b913190612c15e33, type: 3}
+  - {fileID: 8300000, guid: 6a548950ba4cffa4497da2fb85312b63, type: 3}
+  - {fileID: 8300000, guid: 515c5c500440e644e9c31c59021f3681, type: 3}
 --- !u!50 &9130471445535459058
 Rigidbody2D:
   serializedVersion: 5
@@ -253,6 +262,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _collideTag: Coin
+--- !u!81 &7829466744688048361
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846867535938717948}
+  m_Enabled: 1
 --- !u!1 &9046640118745271430
 GameObject:
   m_ObjectHideFlags: 0
