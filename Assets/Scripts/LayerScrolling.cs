@@ -25,8 +25,8 @@ public class LayerScrolling2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        float distance = cam.transform.position.x * speed;
-        float movement = cam.transform.position.x * (1- speed);
+        float distance = cam.transform.position.x * -speed;
+        float movement = cam.transform.position.x * (1 + speed);
 
         transform.position = new Vector3(startPos+distance,transform.position.y,transform.position.z);
 

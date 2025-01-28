@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,19 +35,12 @@ public class PlayerController : MonoBehaviour
     //Health
     public Image healthBar;
     private float healthAmount = 100f;
-    private float damage = 50f;
 
     //BC Mode
     private bool bcMode = false;
 
-    //Audio Variables
-    public AudioSource PlayerSFX;
-    public AudioClip[] JumpSound;
-    public AudioClip[] HitSound;
 
-
-
-
+    private Vector2 _lastPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -62,9 +56,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        
-        
-
         //Save starting position
         _startingPosition = transform.position;
 
@@ -73,6 +64,8 @@ public class PlayerController : MonoBehaviour
 
         //Load BC mode setting check (jillian)
         UpdateBCMode();
+
+        _lastPos = _startingPosition;
     }
 
     // Update is called once per frame
@@ -111,18 +104,35 @@ public class PlayerController : MonoBehaviour
     {
         // Handle horizontal movement
         _move = Input.GetAxis("Horizontal");
+        
+        // Take input from gamepad if it's being used
+        if( Gamepad.current != null )
+        {
+            float joystick = Gamepad.current.leftStick.x.ReadValue();
+            if( joystick != 0 )
+            {
+                _move = joystick;
+            }
+        }
+        // Movement
         if(_move != 0)
         {
-            float newVelX = _maxSpeed * _move;
-
             if ((_move > 0 && !facingRight) || (_move < 0 && facingRight))
             {
                 Flip();
             }
 
-            _rb.linearVelocityX = newVelX;
+            _rb.linearVelocityX = _maxSpeed * _move;
 
             animator.SetBool("IsRunning", true);
+
+            // Player stuck
+            //if(_lastPos == new Vector2(transform.position.x, transform.position.y));
+            //{
+                //transform.position = new Vector2(transform.position.x + (_rb.linearVelocityX * Time.deltaTime), (transform.position.y + 0.01f));
+            //}
+
+            _lastPos = transform.position;
         }
         
         // Lerp to zero velocity
@@ -133,11 +143,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // Handle vertical movement
-        if((Input.GetKeyDown(_jump) || Input.GetButtonDown("Jump")) && _isGrounded)
+        if((Input.GetKeyDown(_jump) || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)) && _isGrounded)
         {
-            PlayJumpSound();
-            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
-            
+            _rb.linearVelocityY = _jumpForce;
         }
     }
 
@@ -180,21 +188,24 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
 
         // Flip the player's scale
-        Vector3 currentScale = gameObject.transform.localScale;
+        /*Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1; // Invert the x-scale
-        gameObject.transform.localScale = currentScale;
+        gameObject.transform.localScale = currentScale;*/
+
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
-    public void Hurt()
+    public void Hurt(int curDamage)
     {
         // Populate
         Debug.Log("Player hurt");
 
+        animator.SetTrigger("TriggerHurt");
+
         if(!bcMode)
         {
-            PlayHurtSound();
-            animator.SetTrigger("TriggerHurt");
-            TakeDamage(damage);
+            //animator.SetTrigger("TriggerHurt");
+            TakeDamage(curDamage);
         }
     }
 
@@ -228,35 +239,5 @@ public class PlayerController : MonoBehaviour
         //Reset velocity to prevent momentum
         _rb.linearVelocity = Vector2.zero;
     }
-
-    public void PlayHurtSound()
-    {
-        if (HitSound.Length > 0 && PlayerSFX != null)
-        {
-            int randomIndex = Random.Range(0, HitSound.Length);
-            AudioClip selectedClip = HitSound[randomIndex];
-
-            PlayerSFX.PlayOneShot(selectedClip);
-        }
-        else
-        {
-            Debug.LogWarning("Hit sound is not assigned");
-        }
-    }
-
-    public void PlayJumpSound()
-    {
-        if (JumpSound.Length > 0 && PlayerSFX != null)
-        {
-            int randomIndex = Random.Range(0, JumpSound.Length);
-            AudioClip selectedClip = JumpSound[randomIndex];
-
-            PlayerSFX.PlayOneShot(selectedClip);
-        }
-        else
-        {
-            Debug.LogWarning("Jump sound is not assigned");
-        }
-    }
-
+        
 }
