@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
 
     private Vector2 _lastPos;
+	
+	private bool powerup = false;
 
     //Audio Variables
     private AudioSource PlayerSFX;
@@ -170,7 +172,7 @@ public class PlayerController : MonoBehaviour
             float groundDist = Mathf.Abs(groundHit.point.y - transform.position.y);
 
             // Update isGrounded based on player y scale
-            if(groundDist < (transform.localScale.y / 2) + 0.1f)
+            if(groundDist < (transform.localScale.y / 2) + 0.2f)
             {
                 _isGrounded = true;
 
@@ -221,7 +223,11 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if(!bcMode){ //(jillian)
+		// If we're powered up, power down and don't take damage.
+		if (powerup) {
+			Powerdown();
+		}
+        else if(!bcMode){ //(jillian)
             healthAmount -= damage;
             healthAmount = Mathf.Clamp(healthAmount, 0, 100);
             healthBar.fillAmount = healthAmount / 100f;
@@ -278,4 +284,26 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning("Jump sound is not assigned");
         }
     }
+	
+	public void Powerup()
+	{
+		if (!powerup)
+		{
+		powerup = true;
+		gameObject.transform.localScale = new Vector3(2, 2, 2);
+		_isGrounded = true;
+		}
+		else
+		{
+			healthAmount += 10;
+			healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+            healthBar.fillAmount = healthAmount / 100f;
+		}
+	}
+	
+	private void Powerdown()
+	{
+		powerup = false;
+		gameObject.transform.localScale = new Vector3(1, 1, 1);
+	}
 }
